@@ -58,7 +58,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
                 name,
                 market_cap,
                 volume_24h,
-                updated_at
+                fetched_at
             )
             VALUES ($1, $2, $3, $4, now())
             "#,
@@ -75,3 +75,4 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     println!("✅ Successfully inserted into categories.category_market_data!");
     Ok(())
 }
+
